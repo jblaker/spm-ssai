@@ -27,7 +27,7 @@ let BrightcovePlayerSDK = Package(
               name: "BrightcoveSSAIWrapper",
               dependencies: [
                 .target(name: "BrightcoveSSAI", condition: .when(platforms: [.iOS, .tvOS])),
-                .product(name: "Brightcove Player SDK", package: "BrightcovePlayerSDK")
+                .product(name: "Brightcove Player SDK", package: "Brightcove Player SDK")
               ]
             ),
         .binaryTarget(
