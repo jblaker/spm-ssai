@@ -15,7 +15,7 @@ let BrightcovePlayerSDK = Package(
             targets: ["BrightcoveSSAITarget"])
     ],
     dependencies: [    
-        .package(url: "https://github.com/jblaker/spm-core.git", exact: "6.10.4")
+        .package(url: "https://github.com/jblaker/spm-core.git", brancn: "master")
     ],
     targets: [
         .target(
