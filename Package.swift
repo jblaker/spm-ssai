@@ -12,12 +12,16 @@ let BrightcovePlayerSDK = Package(
     products: [
         .library(
             name: "BrightcoveSSAI",
-            targets: ["BrightcoveSSAI"])
+            targets: ["BrightcoveSSAI", "OMSDK_Brightcove"])
     ],
     targets: [
         .binaryTarget(
             name: "BrightcoveSSAI",
             path: "xcframework/BrightcoveSSAI.xcframework"
+        ),
+        .binaryTarget(
+            name: "OMSDK_Brightcove",
+            path: "xcframework/OMSDK_Brightcove.xcframework"
         )
     ]
 )
