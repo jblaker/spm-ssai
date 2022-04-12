@@ -19,9 +19,17 @@ let BrightcovePlayerSDK = Package(
     ],
     targets: [
         .target(
-          name: "BrightcoveSSAITarget",
-          dependencies: [.product(name: "BrightcovePlayerSDK", package: "BrightcovePlayerSDK")]
-        ),
+              name: "BrightcoveSSAITarget",
+              dependencies: [.target(name: "BrightcoveSSAIWrapper",
+                                     condition: .when(platforms: [.iOS]))]
+            ),
+        .target(
+              name: "BrightcoveSSAIWrapper",
+              dependencies: [
+                .target(name: "BrightcoveSSAI", condition: .when(platforms: [.iOS, .tvOS])),
+                .product(name: "BrightcovePlayerSDK", package: "BrightcovePlayerSDK")
+              ]
+            ),
         .binaryTarget(
             name: "BrightcoveSSAI",
             path: "xcframework/BrightcoveSSAI.xcframework"
