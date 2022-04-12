@@ -12,10 +12,7 @@ let BrightcovePlayerSDK = Package(
     products: [
         .library(
             name: "BrightcoveSSAI",
-            targets: ["BrightcoveSSAI"]),
-        .library(
-            name: "BrightcovePlayerSDK",
-            targets: ["BrightcovePlayerSDK"])
+            targets: ["BrightcoveSSAI"])
     ],
     dependencies: [    
         .package(url: "https://github.com/jblaker/spm-core.git", from: "1.0.0")
@@ -23,7 +20,8 @@ let BrightcovePlayerSDK = Package(
     targets: [
         .binaryTarget(
             name: "BrightcoveSSAI",
-            path: "xcframework/BrightcoveSSAI.xcframework"
+            path: "xcframework/BrightcoveSSAI.xcframework",
+            dependencies: ["BrightcovePlayerSDK"]
         )
     ]
 )
