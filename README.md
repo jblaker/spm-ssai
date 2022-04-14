@@ -64,8 +64,7 @@ To add the SSAI Plugin for Brightcove Player SDK to your project with Swift Pack
 
 1. First [follow the steps][corespm] to add the Core XCFramework with Swift Package Mananger.
 1. Add the SSAI package to Swift Package Manager using `https://github.com/brightcove/brightcove-player-sdk-ios-ssai.git`.
-
-*Note: The Open Measurement XCFramework will be automatically installed with the SSAI XCFramework.*
+1. You can then select either `BrightcoveSSAI` or `BrightcoveSSAI & Open Measurement` if you need OM support.
 
 [corespm]: https://github.com/brightcove/brightcove-player-sdk-ios#ManualInstallation
 
