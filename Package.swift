@@ -12,6 +12,9 @@ let BrightcovePlayerSDK = Package(
     products: [
         .library(
             name: "BrightcoveSSAI",
+            targets: ["BrightcoveSSAI"])
+        .library(
+            name: "BrightcoveSSAI & Open Measurement",
             targets: ["BrightcoveSSAI", "OMSDK_Brightcove"])
     ],
     targets: [
